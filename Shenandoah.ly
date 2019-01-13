@@ -33,7 +33,7 @@ alto_notes = \relative c' {
   \partial 4 r4 d1 << {e1 e1} \\ {d1 d1} >> d1 << {e2} \\ {d2} >> e2 e2 r4*2 d2 (r4) r4 d2 c4 (r4) e2. d4 ~ d4 ees4 c4 bes4	
 
   \key ees \major 
-  ees8 ees ees4 ~ees8 f8 ees8 ees g g4. ~g8 r8 g bes ~bes4 aes8 g aes4 f8 f f8 f4. f4 r8 g8 g g g4 (f8) g f g f ees4. r8 bes8 ees f
+  ees8 ees ees4 ~ees8 f8 ees8 ees g g4. ~g8 r8 g (bes ~bes4 aes8 g aes) aes f8 f f8 f4. f4 r8 g8 g g g4 (f8) g f g f ees4. r8 bes8 ees f
   ees2 r8 ees ees8. f16 g2 ees ees ~ees8 ees d ees ~ees f4. ~f4 fis
 
   \key fis \major 
@@ -49,7 +49,7 @@ alto_words = \lyricmode {
 
 tenor_notes = \relative c' {
   \key g \major 
-  \partial 4 r4 b1 b g8 d' c b a2 b1 b c2 r r1 r << { r4 c2 c8 b8 } \\ { r2 a4. b8 } >> b4 a aes2
+  \partial 4 r4 b1 b g8 d' c b a2 b1 b c2 r r1 r << { r4 c4. c8 c b } \\ { r2 a8 a a b } >> b4 a aes2
   
   \key ees \major 
   bes2 d ees2. d4 c1 bes2. d4 << {ees2 ees4 des} \\ {ees2 d4 des} >> c4 ces2 aes4
@@ -95,7 +95,7 @@ bass_notes = \relative c' {
   	} 
   	\\ 
   	{ 
-  	  ees,2 d c bes4 g aes2. bes4 ees8 ees4. ees4 d c2 bes aes4 des2 ces4 
+  	  ees,2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
   	  bes2 aes g aes bes2. d4 ees2. cis4
   	}
   >>

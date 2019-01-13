@@ -9,6 +9,12 @@ global = {
   \time 4/4
 }
 
+solo = \relative c {
+	\key g \major
+	\partial 4 d4 g8 g g4~ g8 a b c e d4.~ d8 r g fis e2~ e8 d e d b d~ d2 r8 d e e e4~ e8 b d b a g4. r4 g8 a b2 r8 g b8. c16 d2 r4 g,8 a b2~ b8 g a g~ g2 r2
+	r1 * 4
+}
+
 soprano_notes = \relative c'' {
   \key g \major 
   \partial 4 r4 g1  g1 g2. fis4 g1 g2 << { a2 a } \\ { g2 g } >> r4*2  g2 (r4) r  fis2 e4 (r4)  g2. fis8 g ~ g2 (d2)
@@ -131,6 +137,14 @@ bass_words = \lyricmode {
 }
 
 \score {
+<<
+  \new Staff <<
+	  \new Voice = "solo" <<
+	    \clef "treble_8"
+	    \global
+	    \solo
+	  >>
+  >>
   \new ChoirStaff <<
     \new Staff <<
       \new Voice = "soprano" <<
@@ -163,4 +177,5 @@ bass_words = \lyricmode {
       \lyricsto "bass" \new Lyrics \bass_words
     >>
   >>
+>>
 }

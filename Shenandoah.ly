@@ -20,6 +20,9 @@ soprano_notes = \relative c'' {
   \key fis \major 
   ais8 gis fis2 << {gis4 ais2 cis cis2. cis4 cis2. cis4} \\ {fis,4 fis2 ais b2. gis4 gis2 fis4 gis } >> 
   << {ais1 gis2 gisis ais b } \\ {fis1 fis2 fis fis fis } >> fis4 eis e2
+
+  \key aes \major
+  f8 g aes bes c2 ~c1 aes4. c8 aes2 bes4. des8 c4 c
 }
 
 soprano_words = \lyricmode {
@@ -38,6 +41,8 @@ alto_notes = \relative c' {
 
   dis8 dis dis4 (e8) e e e cis dis4. d2 cis2 dis4 << {dis4} \\ {cis4} >> cis2 c4 c
 
+  \key aes \major
+  f2 r8 aes g ees f ees16 f ~f4 r2 des8 ees f4 ~f2 des e4 g
 }
 alto_words = \lyricmode {
 }
@@ -63,6 +68,18 @@ tenor_notes = \relative c' {
   >>
 
   dis8 dis dis4 ~dis8 ais cis ais gis fis4. ~fis8 fis << {fis8 gis ais2 (b) ais1 } \\ { fis8 gis ais2 ~ais8 fis gis4 fis2 r4 c }>>
+
+  \key aes \major
+  <<
+    {
+      aes'8 bes c f ees2 f8 ees16 f ~f4 r8 des8 ees des c2 r8 f,8 ees' c bes c des bes c4 g'
+    }
+    \\
+    {
+      aes,2 ~aes aes8 bes aes g f4 e f2 r8 f8 ees' c bes c des bes c4 c
+    }
+  >>
+
 }
 tenor_words = \lyricmode {
 }
@@ -93,6 +110,18 @@ bass_notes = \relative c' {
   	{
   	  fis8 fis fis4 (eis2) dis2 cis4 ais b2. cis4 ais2 fis'4 eis
   	  dis2 cis4 ais b2 bis cis4 dis gis, cis fis2. c4
+  	}
+  >>
+
+  \key aes \major
+  f2 ees 
+  <<
+  	{
+      aes8 bes aes g f4 e f1 f2 g4 bes
+  	}
+  	\\
+  	{
+      des,2. c4 bes2 aes g2 c4 e
   	}
   >>
 

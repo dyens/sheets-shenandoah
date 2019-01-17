@@ -61,7 +61,20 @@ alto_words = \lyricmode {
 
 tenor_notes = \relative c' {
   \key g \major 
-  \partial 4 r4 b1 b g8 d' c b a2 b1 b c2 r r1 r << { r4 c4. c8 c b } \\ { r2 a8 a a b } >> b4 a aes2
+  \partial 4 r4 b1 b g8 d' c b a2 b1 b c2 r r1 r 
+
+  <<
+  {
+    \voiceOne
+    r4 c4. c8 c b
+  } 
+  \new Voice {
+    \voiceTwo 
+    r2 a8 a a b
+  }
+  >> \oneVoice
+
+  b4 a aes2
 
   \key ees \major 
   bes2 d ees2. d4 c1 bes2. d4 << {ees2 ees4 des} \\ {ees2 d4 des} >> c4 ces2 aes4
@@ -98,7 +111,7 @@ tenor_notes = \relative c' {
 
 }
 tenor_words = \lyricmode {
-  % \skip 1 \skip 1 u _ _ _ _ _ uh _ wide Missouri
+   uh _ u _ _ _ _ _ uh _ wide Mis -- sou -- ri __ _ _  _ uh _ O way _ _ uh wat -- ers way
 }
 
 % TODO - убрать лигу у баритонов в 27
@@ -107,46 +120,61 @@ bass_notes = \relative c' {
   \partial 4 r4 g2 fis e d c d g fis e d c r4 b8 d g2 r8 g g8. a16 b2 r4 e,8 d c2~c8 e fis g~g4 c,4 bes2
   
   \key ees \major << 
-    { 
+    \new Voice = "bari" { 
+      \voiceOne
       g'1 g2. bes4 ~bes8 bes aes g f ees d f g bes4. ~bes2 g1 ges4 f2 fis4 
       g2 ees ees ees g4 aes bes2 ees2. cis4
     } 
-    \\ 
+    \new Voice = "bass"
     { 
+      \voiceTwo
       ees,2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
       bes2 aes g aes bes2. d4 ees2. cis4
     }
   >>
+  \oneVoice
 
   \key fis \major 
   << 
     {
+      \voiceOne
       fis8 fis fis4 ~fis8 gis ais b b4 ais ~ais ais8 cis ~cis b4 ais8 b ais b b ais8 ais4. ais4. ais8
       ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 (b fis8 fis gis4) ais2 aes4 bes
     }
-    \\
+    \new Voice
     {
+      \voiceTwo
       fis8 fis fis4 (eis2) dis2 cis4 ais b2. cis4 ais2 fis'4 eis
       dis2 cis4 ais b2 bis cis4 dis gis, cis fis2. c4
     }
   >>
+  \oneVoice
 
   \key aes \major
   f2 ees 
   <<
     {
+      \voiceOne
       aes8 bes aes g f4 e f1 f2 g4 bes
     }
-    \\
+    \new Voice
     {
+      \voiceTwo
       des,2. c4 bes2 aes g2 c4 e
     }
   >>
-
+  \oneVoice
 }
 
+basses_words = \lyricmode {
+  uh _ _ _ _ _ _ _  uh _ _ way_ _ _  I'm bound a way Cross the wide Mis -- sou -- ri _ _
+}
 bass_words = \lyricmode {
+  uh _ _ _ _ _ _ ri -- ver to u wat -- ers way
 }
+bari_words = \lyricmode {
+  \skip 1 \skip 1 \skip 4. way __ _ _ _ _ _ _  ri -- ver _ 
+} 
 
 \score {
 <<
@@ -182,13 +210,19 @@ bass_words = \lyricmode {
       >>
       \lyricsto "tenor" \new Lyrics \tenor_words
     >>
-    \new Staff <<
-      \new Voice = "bass" <<
+    \new Staff = "bassStaff" <<
+      \new Voice = "basses" <<
         \clef bass
         \global
         \bass_notes
       >>
-      \lyricsto "bass" \new Lyrics \bass_words
+      \lyricsto "basses" \new Lyrics \basses_words
+
+      \new Lyrics \with { alignAboveContext = #"bassStaff" }
+        \lyricsto "bari" \bari_words
+
+      \new Lyrics 
+        \lyricsto "bass" \bass_words  
     >>
   >>
 >>

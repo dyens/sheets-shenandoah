@@ -23,8 +23,19 @@ soprano_notes = \relative c'' {
   \partial 4 r4 g1  g1 g2. fis4 g1 g2 << { a2 a } \\ { g2 g } >> r4*2  g2 (r4) r  fis2 e4 (r4)  g2. fis8 g ~ g2 (d4) bes
   
   \key ees \major 
-  ees8 ees ees4 ~ees8 f g aes c bes4. ~bes8 r8 ees8 d c2 ~c8 bes c bes g <<{bes4. ~bes4} \\ {g4. g4}>> r8 bes c c c4 ~c8 g bes g f ees4. r8 bes8 ees f
-  g2 r8 ees g8. aes16 bes2 f4 ees8 f g2 ~g8 ees f ees ~ees8 f << {g8 bes ~bes4 cis} \\ {g8 ~g4. b4} >> 
+  ees8 ees ees4 ~ees8 f g aes c bes4. ~bes8 r8 ees8 d c2 ~c8 bes c bes g <<{bes4. ~bes4} \\ {g4. g4}>> r8 bes c c c4 ~c8 g bes g f ees4. r8 bes8 (ees f
+  g2) r8 ees g8. aes16 bes2 f4 ees8 f g2 ~g8 ees f ees ~ees8 f 
+  << 
+  {
+    \voiceOne
+    g8 bes ~bes4 cis
+  } 
+  \new Voice 
+  {
+    \voiceTwo
+    g8 ~g4. b4
+  } 
+  >> 
 
   \key fis \major 
   ais8 gis fis2 << {gis4 ais2 cis cis2. cis4 cis2. cis4} \\ {fis,4 fis2 ais b2. gis4 gis2 fis4 gis } >> 
@@ -35,7 +46,8 @@ soprano_notes = \relative c'' {
 }
 
 soprano_words = \lyricmode {
- uh _ _ _ _ uh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way
+ uh _ _ _ _ uh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way__
+ I'm bound a way __ Cross the wide __ _ Mis -- sou -- ri _ _ _ O 
 }
 
 alto_notes = \relative c' {
@@ -43,8 +55,8 @@ alto_notes = \relative c' {
   \partial 4 r4 d1 << {e1 e1} \\ {d1 d1} >> d1 << {e2} \\ {d2} >> e2 e2 r4*2 d2 (r4) r4 d2 c4 (r4) e2. d4 ~ d4 ees4 c4 bes4 
 
   \key ees \major 
-  ees8 ees ees4 ~ees8 f8 ees8 ees g g4. ~g8 r8 g (bes ~bes4 aes8 g aes) aes f8 f f8 f4. f4 r8 g8 g g g4 (f8) g f g f ees4. r8 bes8 ees f
-  ees2 r8 ees ees8. f16 g2 ees ees ~ees8 ees d ees ~ees f4. ~f4 fis
+  ees8 ees ees4 ~ees8 f8 ees8 ees g g4. ~g8 r8 g (bes ~bes4 aes8 g aes) aes f8 f f8 f4. f4 r8 g8 g g g4 (f8) g f g f ees4. r8 bes8 (ees f
+  ees2) r8 ees ees8. f16 g2 ees ees ~ees8 ees d ees ~ees f4. ~f4 fis
 
   \key fis \major 
   fis8 dis cis2 cis4 dis2 << { gis4 ais8 gis gis2.. eis8} \\ { eis4 fis8 eis fis2 (eis8) fis8 eis eis} >> eis8 eis4. dis4 eis
@@ -114,7 +126,6 @@ tenor_words = \lyricmode {
    uh _ u _ _ _ _ _ uh _ wide Mis -- sou -- ri __ _ _  _ uh _ O way _ _ uh wat -- ers way
 }
 
-% TODO - убрать лигу у баритонов в 27
 bass_notes = \relative c' {
   \key g \major 
   \partial 4 r4 g2 fis e d c d g fis e d c r4 b8 d g2 r8 g g8. a16 b2 r4 e,8 d c2~c8 e fis g~g4 c,4 bes2
@@ -139,7 +150,7 @@ bass_notes = \relative c' {
     {
       \voiceOne
       fis8 fis fis4 ~fis8 gis ais b b4 ais ~ais ais8 cis ~cis b4 ais8 b ais b b ais8 ais4. ais4. ais8
-      ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 (b fis8 fis gis4) ais2 aes4 bes
+      ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 b fis8 fis gis4 ais2 aes4 bes
     }
     \new Voice
     {

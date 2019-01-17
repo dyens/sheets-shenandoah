@@ -194,7 +194,7 @@ basses_words = \lyricmode {
   uh _ _ _ _ _ _ _  uh _ _ way_ _ _  I'm bound a way Cross the wide Mis -- sou -- ri _ _
 }
 bass_words = \lyricmode {
-  uh _ _ _ _ _ _ ri -- ver to u wat -- ers way
+  uh _ _ _ _ _ _ ri -- ver to u wat -- ers way _ uh uh O uh _ _ Tis
 }
 bari_words = \lyricmode {
   \skip 1 \skip 1 \skip 4. way __ _ _ _ _ _ _  ri -- ver _ 

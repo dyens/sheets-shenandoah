@@ -92,9 +92,16 @@ tenor_notes = \relative c' {
   bes2 d ees2. d4 c1 bes2. d4 << {ees2 ees4 des} \\ {ees2 d4 des} >> c4 ces2 aes4
 
   << 
-    { bes8 bes ees d c2 | ees8 d bes g ges2 | bes2.. aes8 | g4 c des dis } 
-    \\
-    { bes2 aes | bes c | bes2.. aes8 | g4 aes bes b }
+    \new Voice = "tenorI"
+    { 
+      \voiceOne
+      bes8 bes ees d c2 | ees8 d bes g ges2 | bes2.. aes8 | g4 c des dis 
+    }
+    \new Voice = "tenorII"
+    {
+      \voiceTwo
+      bes2 aes | bes c | bes2.. aes8 | g4 aes bes b
+    }
   >>
 
   \key fis \major 
@@ -124,6 +131,12 @@ tenor_notes = \relative c' {
 }
 tenor_words = \lyricmode {
    uh _ u _ _ _ _ _ uh _ wide Mis -- sou -- ri __ _ _  _ uh _ O way _ _ uh wat -- ers way
+}
+tenorI_words = \lyricmode {
+  \skip 8 way _ _ _ to do do do do
+}
+tenorII_words = \lyricmode {
+  \skip 1 \skip 1 \skip 1 O uh _ _ _ _ Tis
 }
 
 bass_notes = \relative c' {
@@ -213,13 +226,19 @@ bari_words = \lyricmode {
       >>
       \lyricsto "alto" \new Lyrics \alto_words
     >>
-    \new Staff <<
+    \new Staff = "tenorStaff" <<
       \new Voice = "tenor" <<
         \clef "treble_8"
         \global
         \tenor_notes
       >>
       \lyricsto "tenor" \new Lyrics \tenor_words
+
+      \new Lyrics \with { alignAboveContext = #"tenorStaff" }
+        \lyricsto "tenorI" \tenorI_words
+
+      \new Lyrics 
+        \lyricsto "tenorII" \tenorII_words  
     >>
     \new Staff = "bassStaff" <<
       \new Voice = "basses" <<

@@ -12,7 +12,10 @@ global = {
 solo = \relative c {
   \key g \major
   \partial 4 d4 g8 g g4~ g8 a b c e d4.~ d8 r g fis e2~ e8 d e d b d~ d2 r8 d e e e4~ e8 b d b a g4. r4 g8 a b2 r8 g b8. c16 d2 r4 g,8 a b2~ b8 g a g~ g2 r2
-  r1 * 4
+}
+
+solo_words = \lyricmode {
+  oh Shen -- an -- doah __ I long to see you __ way __ _ _ you roll -- ing riv -- er __ oh Shen -- an -- doah __ I long to see you  way __ _ _ I'm bound a -- way 'cross the wide __ Mis -- sou -- ri __
 }
 
 soprano_notes = \relative c'' {
@@ -32,6 +35,7 @@ soprano_notes = \relative c'' {
 }
 
 soprano_words = \lyricmode {
+ uh _ _ _ _ uh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way
 }
 
 alto_notes = \relative c' {
@@ -51,12 +55,14 @@ alto_notes = \relative c' {
   f2 r8 aes g ees f ees16 f ~f4 r2 des8 ees f4 ~f2 des e4 g
 }
 alto_words = \lyricmode {
+  uh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
 }
+
 
 tenor_notes = \relative c' {
   \key g \major 
   \partial 4 r4 b1 b g8 d' c b a2 b1 b c2 r r1 r << { r4 c4. c8 c b } \\ { r2 a8 a a b } >> b4 a aes2
-  
+
   \key ees \major 
   bes2 d ees2. d4 c1 bes2. d4 << {ees2 ees4 des} \\ {ees2 d4 des} >> c4 ces2 aes4
 
@@ -92,8 +98,10 @@ tenor_notes = \relative c' {
 
 }
 tenor_words = \lyricmode {
+  % \skip 1 \skip 1 u _ _ _ _ _ uh _ wide Missouri
 }
 
+% TODO - убрать лигу у баритонов в 27
 bass_notes = \relative c' {
   \key g \major 
   \partial 4 r4 g2 fis e d c d g fis e d c r4 b8 d g2 r8 g g8. a16 b2 r4 e,8 d c2~c8 e fis g~g4 c,4 bes2
@@ -148,6 +156,8 @@ bass_words = \lyricmode {
       \global
       \solo
     >>
+
+    \lyricsto "solo" \new Lyrics \solo_words
   >>
   \new ChoirStaff <<
     \new Staff <<

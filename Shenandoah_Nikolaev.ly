@@ -43,6 +43,16 @@ soprano_notes = \relative c'' {
 
   \key aes \major
   f8 g aes bes c2 ~c1 aes4. c8 aes2 bes4. des8 c4 c
+  c1 c1 ~c4 bes aes f 
+  <<
+   { g2 ~g }
+   \\
+   { f2 e }
+  >>
+
+
+  \key f \major
+
 }
 
 soprano_words = \lyricmode {
@@ -65,6 +75,9 @@ alto_notes = \relative c' {
 
   \key aes \major
   f2 r8 aes g ees f ees16 f ~f4 r2 des8 ees f4 ~f2 des e4 g
+  aes2 ~aes8 aes g aes f ees16 f ~f4 r4 r8 ees f aes g ees f ees c (des) c4 d c2  
+
+  \key f \major
 }
 alto_words = \lyricmode {
   uh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
@@ -121,12 +134,17 @@ tenor_notes = \relative c' {
   <<
     {
       aes'8 bes c f ees2 f8 ees16 f ~f4 r8 des8 ees des c2 r8 f,8 ees' c bes c des bes c4 g'
+      aes2 ~aes8 aes g aes f8 ees16 f ~f4
     }
     \\
     {
       aes,2 ~aes aes8 bes aes g f4 e f2 r8 f8 ees' c bes c des bes c4 c
+      c8 g aes bes c2 c
     }
   >>
+
+  r4 c c8 ees c bes des bes c (des) c1
+  \key f \major
 
 }
 tenor_words = \lyricmode {
@@ -148,6 +166,8 @@ bass_notes = \relative c' {
       \voiceOne
       g'1 g2. bes4 ~bes8 bes aes g f ees d f g bes4. ~bes2 g1 ges4 f2 fis4 
       g2 ees ees ees g4 aes bes2 ees,2. cis4
+
+
     } 
     \new Voice = "bass"
     { 
@@ -180,14 +200,18 @@ bass_notes = \relative c' {
     {
       \voiceOne
       aes8 bes aes g f4 e f1 f2 g4 bes
+      aes8 g aes bes c2 aes2 r8 aes4. aes8 c aes g aes e f g bes1 
     }
     \new Voice
     {
       \voiceTwo
       des,2. c4 bes2 aes g2 c4 e
+      f2 ees des (f) des8 f ees c bes g aes a c1
     }
   >>
   \oneVoice
+
+  \key f \major
 }
 
 basses_words = \lyricmode {

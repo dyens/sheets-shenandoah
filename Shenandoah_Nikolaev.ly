@@ -47,7 +47,7 @@ soprano_notes = \relative c'' {
 
 soprano_words = \lyricmode {
  uh _ _ _ _ uh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way__
- I'm bound a way __ Cross the wide __ _ Mis -- sou -- ri _ _ _ O 
+ I'm bound a way __ _ Cross the wide __ _ Mis -- sou -- ri _ _ _ O 
 }
 
 alto_notes = \relative c' {
@@ -147,13 +147,13 @@ bass_notes = \relative c' {
     \new Voice = "bari" { 
       \voiceOne
       g'1 g2. bes4 ~bes8 bes aes g f ees d f g bes4. ~bes2 g1 ges4 f2 fis4 
-      g2 ees ees ees g4 aes bes2 ees2. cis4
+      g2 ees ees ees g4 aes bes2 ees,2. cis4
     } 
     \new Voice = "bass"
     { 
       \voiceTwo
       ees,2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
-      bes2 aes g aes bes2. d4 ees2. cis4
+      bes2 aes g aes bes2. d4 ees'2. cis4
     }
   >>
   \oneVoice

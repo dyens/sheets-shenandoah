@@ -21,7 +21,8 @@ solo = \relative c {
 solo_words = \lyricmode {
   oh Shen -- an -- doah __ I long to see you __ way __ _ _ you roll -- ing riv -- er __ oh Shen -- an -- doah __ I long to see you  way __ _ _ I'm bound a -- way 'cross the wide __ Mis -- sou -- ri __
 
-  Oh, Shen -- an -- doah's my nat -- ive vall -- ey way ___ we're bound a way cross the wide Mis -- sou -- ri
+  Oh, Shen -- an -- doah's my na -- tive val -- ley way __ you roll -- ing ri -- ver 
+  Oh, Shen -- an -- doah's my na -- tive val -- ley way __ we're bound a way cross the wide Mis -- sou -- ri
 }
 
 soprano_notes = \relative c'' {

@@ -150,7 +150,26 @@ tenor_notes = \relative c' {
   >>
 
   r4 c c8 ees c bes des bes c (des) c1
+  
   \key f \major
+  a1 a a2 bes a2. a4 a2. c4 ~c4 bes aes2 a1 g2 aes a (g)  
+
+  << 
+    \new Voice
+    { 
+      \voiceOne
+      ges4 bes8 aes ees'2
+    }
+    \new Voice
+    {
+      \voiceTwo
+      ges,2 aes 
+    }
+  >>
+  \oneVoice
+
+  bes1 a1 
+
 
 }
 tenor_words = \lyricmode {
@@ -218,6 +237,7 @@ bass_notes = \relative c' {
   \oneVoice
 
   \key f \major
+  f2 e d c4 a bes2 c f4 f8 g e4 c d2 c4 a bes2 b c4 d bes2 a bes c2 (bes) aes (des) c1 << {f1} \\ {f,1} >>
 }
 
 basses_words = \lyricmode {

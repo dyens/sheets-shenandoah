@@ -85,7 +85,14 @@ alto_notes = \relative c' {
   aes2 ~aes8 aes g aes f ees16 f ~f4 r4 r8 ees f aes g ees f ees c (des) c4 d c2  
 
   \key f \major
-}
+  c1 f4 f8 e f4   
+  << { \voiceOne
+    g4 f2 f4. 
+  } \new Voice { \voiceTwo
+    e4 d2 d4. 
+  } >> 
+  e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 << {d1} \\ {c1} >> 
+ }
 alto_words = \lyricmode {
   uh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
 }

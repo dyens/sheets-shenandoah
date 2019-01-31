@@ -68,7 +68,7 @@ soprano_notes = \relative c'' {
 }
 
 soprano_words = \lyricmode {
- uh _ _ _ _ uh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way__
+ ooh _ _ _ _ ooh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way__
  I'm bound a way __ _ Cross the wide __ _ Mis -- sou -- ri _ _ _ O 
 }
 
@@ -99,7 +99,7 @@ alto_notes = \relative c' {
   e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 << {d1} \\ {c1} >> 
  }
 alto_words = \lyricmode {
-  uh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
+  ooh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
 }
 
 
@@ -186,13 +186,13 @@ tenor_notes = \relative c' {
 
 }
 tenor_words = \lyricmode {
-   uh _ u _ _ _ _ _ uh _ wide Mis -- sou -- ri __ _ _  _ uh _ O way _ _ uh wat -- ers way
+   ooh _ u _ _ _ _ _ ooh _ wide Mis -- sou -- ri __ _ _  _ ooh _ O way _ _ ooh wat -- ers way
 }
 tenorI_words = \lyricmode {
   \skip 8 way _ _ _ to do do do do
 }
 tenorII_words = \lyricmode {
-  \skip 1 \skip 1 \skip 1 O uh _ _ _ _ Tis
+  \skip 1 \skip 1 \skip 1 O ooh _ _ _ _ Tis
 }
 
 bass_notes = \relative c' {
@@ -254,10 +254,10 @@ bass_notes = \relative c' {
 }
 
 basses_words = \lyricmode {
-  uh _ _ _ _ _ _ _  uh _ _ way_ _ _  I'm bound a way Cross the wide Mis -- sou -- ri _ _
+  ooh _ _ _ _ _ _ _  ooh _ _ way_ _ _  I'm bound a way Cross the wide Mis -- sou -- ri _ _
 }
 bass_words = \lyricmode {
-  uh _ _ _ _ _ _ ri -- ver to u wat -- ers way _ uh uh O uh _ _ Tis
+  ooh _ _ _ _ _ _ ri -- ver to u wat -- ers way _ ooh ooh O ooh _ _ Tis
 }
 bari_words = \lyricmode {
   \skip 1 \skip 1 \skip 4. way __ _ _ _ _ _ _  ri -- ver _ 

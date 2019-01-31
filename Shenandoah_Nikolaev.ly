@@ -210,8 +210,8 @@ bass_notes = \relative c' {
     \new Voice = "bass"
     { 
       \voiceTwo
-      ees,2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
-      bes2 aes g aes bes2. d4 ees'2. cis4
+      ees2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
+      bes2 aes g aes bes2. d4 ees2. cis4
     }
   >>
   \oneVoice

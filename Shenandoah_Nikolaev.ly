@@ -13,9 +13,9 @@ solo = \relative c {
   \key g \major
   \partial 4 d4 g8 g g4~ g8 a b c e d4.~ d8 r g fis e2~ e8 d e d b d~ d2 r8 d e e e4~ e8 b d b a g4. r4 g8 a b2 r8 g b8. c16 d2 r4 g,8 a b2~ b8 g a g~ g2 r2
 
-  r1*25 r2.
-  \key f \major
-  c,4 f8 f f4 ~f8  g a bes | d c4. r4 f8 (e d2) ~d8 c d c | a c4. r4 c | d8 d d4 ~d8 a c a | g f4. r4 f8 (g a2) r8 f a8. bes16 | c2 r4 f,8 g | a2 r2 | r2. f4 | g2. f4 | f1 
+   R1*25 r2.
+   \key f \major
+   c,4 f8 f f4 ~f8  g a bes | d c4. r4 f8 (e d2) ~d8 c d c | a c4. r4 c | d8 d d4 ~d8 a c a | g f4. r4 f8 (g a2) r8 f a8. bes16 | c2 r4 f,8 g | a2 r2 | r2. f4 | g2. f4 | f1 
 }
 
 solo_words = \lyricmode {

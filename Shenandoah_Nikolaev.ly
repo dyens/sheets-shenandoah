@@ -22,7 +22,7 @@ solo_words = \lyricmode {
   oh Shen -- an -- doah __ I long to see you __ way __ _ _ you roll -- ing riv -- er __ oh Shen -- an -- doah __ I long to see you  way __ _ _ I'm bound a -- way 'cross the wide __ Mis -- sou -- ri __
 
   Oh, Shen -- an -- doah's my na -- tive val -- ley way __ you roll -- ing ri -- ver 
-  Oh, Shen -- an -- doah's my na -- tive val -- ley way __ we're bound a way cross the wide Mis -- sou -- ri
+  Oh, Shen -- an -- doah's my na -- tive val -- ley way __ we're bound a way cross the wide Mis -- sou__ _ ri
 }
 
 soprano_notes = \relative c'' {
@@ -59,7 +59,12 @@ soprano_notes = \relative c'' {
 
 
   \key f \major
-
+  << { \voiceOne
+    g4 a2 c4 ~c4 a8 g a4 c4 ~c8 d bes a bes4 c4 ~c2 \glissando a4 c4 ~c2 ~c2 d4 a aes2 a g c \glissando f, f4 f8 g f2 ~f ~f 
+  } \new Voice { \voiceTwo
+    f1 c'4 a8 g a4 a a g8 f g4 g ~g2 \glissando f4 g4 a2 g2 f2 f f f e des f4 f8 g ees2 f2 f2 
+  } >> 
+  f1 f
 }
 
 soprano_words = \lyricmode {

@@ -45,8 +45,22 @@ soprano_notes = \relative c'' {
   >> 
 
   \key fis \major 
-  ais8 gis fis2 << {gis4 ais2 cis cis2. cis4 cis2. cis4} \\ {fis,4 fis2 ais b2. gis4 gis2 fis4 gis } >> 
-  << {ais1 gis2 gisis ais b } \\ {fis1 fis2 fis fis fis } >> fis4 eis e2
+  ais8 gis fis2 
+  << 
+  {
+    \voiceOne
+    gis4 ais2 cis cis2. cis4 cis2. cis4
+    ais1 gis2 gisis ais b
+  } 
+  \new Voice 
+  {
+    \voiceTwo
+    fis4 fis2 ais b2. gis4 gis2 fis4 gis
+    fis1 fis2 fis fis fis 
+  } 
+  >>
+  \oneVoice
+  fis4 eis e2
 
   \key aes \major
   f8 g aes bes c2 ~c1 aes4. c8 aes2 bes4. des8 c4 c
@@ -59,17 +73,28 @@ soprano_notes = \relative c'' {
 
 
   \key f \major
-  << { \voiceOne
-    g4 a2 c4 ~c4 a8 g a4 c4 ~c8 d bes a bes4 c4 ~c2 \glissando a4 c4 ~c2 ~c2 d4 a aes2 a g c \glissando f, f4 f8 g f2 ~f ~f 
-  } \new Voice { \voiceTwo
-    f1 c'4 a8 g a4 a a g8 f g4 g ~g2 \glissando f4 g4 a2 g2 f2 f f f e des f4 f8 g ees2 f2 f2 
-  } >> 
+  << 
+    { 
+    \voiceOne
+      g4 a2 c4 ~c4 a8 g a4 c4 ~c8 d bes a bes4 c4 ~c2 \glissando a4 c4 ~c2 ~c2 d4 a aes2 a g c \glissando f, f4 f8 g f2 ~f ~f 
+    } 
+    \new Voice
+    {
+      \voiceTwo
+      f1 c'4 a8 g a4 a a g8 f g4 g ~g2 \glissando f4 g4 a2 g2 f2 f f f e des f4 f8 g ees2 f2 f2 
+    }
+  >>
+  \oneVoice 
   f1 f
 }
 
 soprano_words = \lyricmode {
  ooh _ _ _ _ ooh way way _ wide _ _ O Shen -- an -- doah I love her daugh -- ter way _ _ you roll -- ing river for her I cross your roam -- ing wat -- ers way__
- I'm bound a way __ _ Cross the wide __ _ Mis -- sou -- ri _ _ _ O 
+ I'm bound a way __ _ Cross the wide __ _ Mis -- sou -- ri _ _ _
+
+ O _ _ _ _ _ A _ ooh _ ooh _ _ _ _ _ _ _ to do do do ooh oom
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ wide cross the wide
+
 }
 
 alto_notes = \relative c' {
@@ -81,7 +106,20 @@ alto_notes = \relative c' {
   ees2) r8 ees ees8. f16 g2 \glissando ees ees ~ees8 ees d ees ~ees f4. ~f4 fis
 
   \key fis \major 
-  fis8 dis cis2 cis4 dis2 << { gis4 ais8 gis gis2.. eis8} \\ { eis4 fis8 eis fis2 (eis8) fis8 eis eis} >> eis8 eis4. dis4 eis
+  fis8 dis cis2 cis4 dis2
+  << 
+  {
+    \voiceOne
+    gis4 ais8 gis gis2.. eis8
+  } 
+  \new Voice 
+  {
+    \voiceTwo
+    eis4 fis8 eis fis2 (eis8) fis8 eis eis 
+  } 
+  >>
+  \oneVoice
+  eis8 eis4. dis4 eis
 
   dis8 dis dis4 (e8) e e e cis dis4. d2 cis2 dis4 << {dis4} \\ {cis4} >> cis2 c4 c
 
@@ -96,10 +134,28 @@ alto_notes = \relative c' {
   } \new Voice { \voiceTwo
     e4 d2 d4. 
   } >> 
-  e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 << {d1} \\ {c1} >> 
- }
+  e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 
+  
+  << 
+  {
+    \voiceOne
+    d1
+  } 
+  \new Voice 
+  {
+    \voiceTwo
+    c1
+  } 
+  >>
+  \oneVoice
+
+}
 alto_words = \lyricmode {
   ooh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+   O _ _ O _ A and _ _ _ _ _ _ O _ _ _ _ _ _ _ _ _ _ _ _ _ ooh _ ooh _ _ _ _ _ mm _ _ oh _ _ ooh ooh _ _ _ _ _ to _ _ _ _ _ _ _ O 
+
+   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ wide cross the wide _ ooh mm
 }
 
 
@@ -219,34 +275,24 @@ bass_notes = \relative c' {
       g'1 g2. bes4 ~bes8 bes aes g f ees d f g bes4. ~bes2 g1 ges4 f2 fis4 
       g2 ees ees ees g4 aes bes2 ees,2. cis4
 
+      \key fis \major 
+      fis8 fis fis4 ~fis8 gis ais b b4 ais ~ais ais8 cis ~cis b4 ais8 b ais b b ais8 ais4. ais4. ais8
+      ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 b fis8 fis gis4 ais2 aes4 bes
 
     } 
     \new Voice = "bass"
     { 
       \voiceTwo
-      ees2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
+      ees,2 d c bes4 g aes2. bes4 ees8 ees4. ees4 (d c2) bes aes4 des2 ces4 
       bes2 aes g aes bes2. d4 ees2. cis4
-    }
-  >>
-  \oneVoice
 
-  \key fis \major 
-  << 
-    \new Voice
-    {
-      \voiceOne 
-      fis8 fis fis4 ~fis8 gis ais b b4 ais ~ais ais8 cis ~cis b4 ais8 b ais b b ais8 ais4. ais4. ais8
-      ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 b fis8 fis gis4 ais2 aes4 bes
-    }
-    \new Voice
-    {
-      \voiceTwo
-      fis8 fis fis4 (eis2) dis2 cis4 ais b2. cis4 ais2 fis'4 eis
+      \key fis \major 
+      fis8 fis fis4 eis2 dis2 cis4 ais b2. cis4 ais2 fis'4 eis
       dis2 cis4 ais b2 bis cis4 dis gis, cis fis2. c4
     }
   >>
-  \oneVoice
 
+  
   \key aes \major
   f2 ees 
   <<
@@ -273,6 +319,7 @@ basses_words = \lyricmode {
 }
 bass_words = \lyricmode {
   ooh _ _ _ _ _ _ ri -- ver to oo wat -- ers way _ ooh ooh O ooh _ _ Tis
+  _ _ _  O too to do a a ooh to do ooh
 }
 bari_words = \lyricmode {
   \skip 1 \skip 1 \skip 4. way __ _ _ _ _ _ _  ri -- ver _ 

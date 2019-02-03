@@ -153,7 +153,7 @@ alto_notes = \relative c' {
 alto_words = \lyricmode {
   ooh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
-   O _ _ O _ A and _ _ _ _ _ _ O _ _ _ _ _ _ _ _ _ _ _ _ _ ooh _ ooh _ _ _ _ _ mm _ _ oh _ _ ooh ooh _ _ _ _ _ to _ _ _ _ _ _ _ O 
+   O _ _ O _ A and _ _ _ _ _ _ O _ _ _ _ _ _ _ _ _ _ _ _ _ ooh _ ooh _ _ _ _ _ mm _ _ oh _ _ ooh ooh _ _ _ _ _ to to do do do _ _ tooh O 
 
    _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ wide cross the wide _ ooh mm
 }
@@ -221,24 +221,28 @@ tenor_notes = \relative c' {
 
   \key aes \major
   <<
+    \new Voice = "tenorI_aesmaj"
     {
+     \voiceOne
       aes'8 bes c f ees2 f8 ees16 f ~f4 r8 des8 ees des c2 r8 f,8 ees' c bes c des bes c4 g'
       aes2 ~aes8 aes g aes f8 ees16 f ~f4
     }
-    \\
+    \new Voice = "tenorII_aesmaj"
     {
+      \voiceTwo
       aes,2 ~aes aes8 bes aes g f4 e f2 r8 f8 ees' c bes c des bes c4 c
-      c8 g aes bes c2 c
+      ~c8 g aes bes c2 c
     }
   >>
+  \oneVoice
 
-  r4 c c8 ees c bes des bes c (des) c1
+  \new Voice = "tenor_aesmaj_end" { r4 c c8 ees c bes des bes c (des) c1 }
   
   \key f \major
   a1 a a2 bes a2. a4 a2. c4 ~c4 bes aes2 a1 g2 aes a (g)  
 
   << 
-    \new Voice
+    \new Voice = "tenorI_fmaj_final"
     { 
       \voiceOne
       ges4 bes8 aes ees'2
@@ -311,7 +315,24 @@ bass_notes = \relative c' {
   \oneVoice
 
   \key f \major
-  f2 e d c4 a bes2 c f4 f8 g e4 c d2 c4 a bes2 b c4 d bes2 a bes c2 (bes) aes (des) c1 << {f1} \\ {f,1} >>
+  f2 e d c4 a bes2 c f4 f8 g e4 c d2 c4 a bes2 b c4 d bes2 a bes c2 (bes) 
+
+  \new Voice = "basses_end" {
+    aes (des) c1
+  } 
+
+  <<
+    \new Voice = "bass_last" {
+      \voiceOne
+      f1
+    }
+    \new Voice
+    {
+      \voiceTwo
+      f,1
+    }
+  >>
+  \oneVoice
 }
 
 basses_words = \lyricmode {
@@ -319,7 +340,7 @@ basses_words = \lyricmode {
 }
 bass_words = \lyricmode {
   ooh _ _ _ _ _ _ ri -- ver to oo wat -- ers way _ ooh ooh O ooh _ _ Tis
-  _ _ _  O too to do a a ooh to do ooh
+  _ _ _ O too to do a a ooh to do ooh
 }
 bari_words = \lyricmode {
   \skip 1 \skip 1 \skip 4. way __ _ _ _ _ _ _  ri -- ver _ 
@@ -370,6 +391,24 @@ bari_words = \lyricmode {
          Tis sevn long years since last I've seen you a __ _ _ way__Missou -- ri 
       }
 
+      \new Lyrics \with { alignAboveContext = #"tenorStaff" }
+        \lyricsto "tenorI_aesmaj" \lyricmode {
+         to do do do ooh _ _ _ ooh 
+      }
+
+      \new Lyrics 
+        \lyricsto "tenorII_aesmaj" \lyricmode {
+         _ to do do do do _ _ to do do to do do do doo ooh to do do do
+      }
+
+      \new Lyrics \lyricsto "tenor_aesmaj_end" \lyricmode {
+         to to do do do _ _ tooh
+      } 
+
+      \new Lyrics \lyricsto "tenorI_fmaj_final" \lyricmode {
+         _ cross the wide
+      } 
+
     >>
     \new Staff = "bassStaff" <<
       \new Voice = "basses" <<
@@ -384,6 +423,16 @@ bari_words = \lyricmode {
 
       \new Lyrics 
         \lyricsto "bass" \bass_words  
+
+      \new Lyrics 
+        \lyricsto "basses_end" \lyricmode {
+          wide
+        }  
+        
+      \new Lyrics 
+        \lyricsto "bass_last" \lyricmode {
+          mm
+        }  
 
     >>
   >>

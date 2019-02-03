@@ -4,8 +4,8 @@
 \header {
   title = "Shenandoah"
   subtitle = "Traditional American folk song"
-  composer = "Peter Hollens"
-  arranger = "Ар. Tom Anderson; обр. С. Николаев"
+  composer = "Peter Hollens, ар. Tom Anderson"
+  arranger = "обр. С. Николаев"
 }
 
 global = {

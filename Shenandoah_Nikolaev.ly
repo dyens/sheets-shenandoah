@@ -165,9 +165,6 @@ alto_notes = \relative c' {
     e4 d2 d4. 
   } >> 
   e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 c1
-  
-
-
 }
 alto_words = \lyricmode {
   ooh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
@@ -298,9 +295,8 @@ bass_notes = \relative c' {
       g2 ees ees ees g4 aes bes2 ees,2. cis4
 
       \key fis \major 
-      fis8 fis fis4 ~fis8 gis ais b b4 ais ~ais ais8 cis ~cis b4 ais8 b ais b b ais8 ais4. ais4. ais8
-      ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 b fis8 fis gis4 ais2 aes4 bes
-
+      fis8 fis fis4 ~fis8 gis ais b b4 ais ~ais ais8 cis ~cis b4 ais8 b ais b b ais8 ais4. ais4. 
+      ais8 ais8 ais ais4 ~ais8 ais ais ais gis fis4. ~fis8 fis fis gis ais4 b fis8 fis gis4 ais2 aes4 bes
     } 
     \new Voice = "bass"
     { 
@@ -362,6 +358,9 @@ bass_words = \lyricmode {
 }
 bari_words = \lyricmode {
   \skip 1 \skip 1 \skip 4. way __ _ _ _ _ _ _  ri -- ver _ 
+  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+  Tis sevn long years since last I've seen you a -- way _ _ _ _ Mis -- sou -- ri _ ooh
+
 } 
 
 \score {
@@ -406,7 +405,6 @@ bari_words = \lyricmode {
 
       \new Lyrics \lyricsto "tenor_fismaj" \lyricmode {
          sevn long years since last I've seen you and hear your roaming ri -- ver
-         Tis sevn long years since last I've seen you a __ _ _ way__Missou -- ri 
       }
 
       \new Lyrics \with { alignAboveContext = #"tenorStaff" }

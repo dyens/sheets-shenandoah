@@ -76,12 +76,40 @@ soprano_notes = \relative c'' {
   << 
     { 
     \voiceOne
-      g4 a2 c4 ~c4 a8 g a4 c4 ~c8 d bes a bes4 c4 ~c2 \glissando a4 c4 ~c2 ~c2 d4 a aes2 a g c \glissando f, f4 f8 g f2 ~f ~f 
+      g4 a2 c4 ~c4 a8 g a4 c4 ~c8 d bes a bes4 c4 ~c2 \glissando a4 c4
     } 
     \new Voice
     {
       \voiceTwo
-      f1 c'4 a8 g a4 a a g8 f g4 g ~g2 \glissando f4 g4 a2 g2 f2 f f f e des f4 f8 g ees2 f2 f2 
+      f,1 c'4 a8 g a4 a a g8 f g4 g ~g2 \glissando f4 g4 
+    }
+  >>
+  << 
+    \new Voice
+    { 
+    \voiceOne
+      \skip 4 f'4 \tuplet 3/2 { f4 e ees }
+    } 
+    \new Voice
+    {
+      \voiceTwo
+      a,2 g2
+    }
+    \new Voice
+    {
+      \voiceThree
+      c2 ~c2
+    }
+  >>
+  << 
+    { 
+    \voiceOne
+      d4 a aes2 a g c \glissando f, f4 f8 g f2 ~f ~f 
+    } 
+    \new Voice
+    {
+      \voiceTwo
+      f2 f f f e des f4 f8 g ees2 f2 f2 
     }
   >>
   \oneVoice 
@@ -93,8 +121,7 @@ soprano_words = \lyricmode {
  I'm bound a way __ _ Cross the wide __ _ Mis -- sou -- ri _ _ _
 
  O _ _ _ _ _ A _ ooh _ ooh _ _ _ _ _ _ _ to do do do ooh oom
- _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ wide cross the wide
-
+ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ way hm wide cross the wide
 }
 
 alto_notes = \relative c' {
@@ -154,8 +181,7 @@ alto_words = \lyricmode {
   ooh _ _ _ _ _ _ _ _ _ _  O _ _ _ _ _ _  _ _ way you
   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
    O _ _ O _ A and _ _ _ _ _ _ O _ _ _ _ _ _ _ _ _ _ _ _ _ ooh _ ooh _ _ _ _ _ mm _ _ oh _ _ ooh ooh _ _ _ _ _ to to do do do _ _ tooh O 
-
-   _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ wide cross the wide _ ooh mm
+   _ _ ooh _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ wide cross the wide _ ooh mm
 }
 
 
@@ -428,7 +454,7 @@ bari_words = \lyricmode {
         \lyricsto "basses_end" \lyricmode {
           wide
         }  
-        
+
       \new Lyrics 
         \lyricsto "bass_last" \lyricmode {
           mm

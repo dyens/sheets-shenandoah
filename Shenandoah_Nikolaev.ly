@@ -3,7 +3,7 @@
 
 \header {
   title = "Shenandoah"
-  subsubtitle = "Traditional American folk song"
+  subtitle = "Traditional American folk song"
   arranger = "ар. С. Николаев"
 
 }
@@ -164,20 +164,9 @@ alto_notes = \relative c' {
   } \new Voice { \voiceTwo
     e4 d2 d4. 
   } >> 
-  e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 
+  e8 e2 c4 e4 f2 e4 ees d2. des4 c2 d4 des c1 c2 (des4) des8 e c2 ces ees1 c1
   
-  << 
-  {
-    \voiceOne
-    d1
-  } 
-  \new Voice 
-  {
-    \voiceTwo
-    c1
-  } 
-  >>
-  \oneVoice
+
 
 }
 alto_words = \lyricmode {

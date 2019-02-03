@@ -3,6 +3,9 @@
 
 \header {
   title = "Shenandoah"
+  subsubtitle = "Traditional American folk song"
+  arranger = "ар. С. Николаев"
+
 }
 
 global = {
